@@ -32,11 +32,14 @@ python -m http.server 8000
 - Sober, low-contrast palette: cool grey-green paper, slate ink and a muted sage accent.
 - Serif body and display type; small monospace labels for chapter numbers and metadata.
 - The normal top navigation is hidden. Navigation lives in a small fixed bottom-left "Index" text
-  link that opens a contents panel with seven section links and three contact links. It is plain
+  link that opens a compact two-column table of seven sections and a contact-link row. It is plain
   text, not a button or toggle box.
-- The story layer is deliberately quiet: a "FADE IN" title page, chapters 01–07, scene marks and
-  running orders on case studies, slow reveals, and a 3px hairline progress rail. Connective
-  paragraphs were removed after review; "Intermission" and "Final scene" are unchanged.
+- The story layer is deliberately quiet: a "FADE IN" title page, chapters 01–07, slow reveals and
+  a 3px hairline progress rail. Scene marks, running orders and connective paragraphs were removed
+  after review; "Intermission" and "Final scene" are unchanged.
+- The Work section is three aligned visual cards. Each has a small data drawing made only from
+  verified numbers (accuracy bars, audit facts, a layout wireframe), a one-line summary, two fact
+  cells and a short paper-trail link row. No fabricated screenshots or results.
 - The "Now" section holds the owner's real current titles and page numbers, with a real
   "last updated" date. Nothing there is a claim about skills or experience.
 - Work-in-progress analysis is labelled as such. No metrics, projects or outcomes are invented.
