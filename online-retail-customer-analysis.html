@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Online Retail II — Repeat Purchase &amp; Loyalty — Faria Kamal</title>
+  <meta name="description" content="Work-in-progress case study: auditing the UCI Online Retail II dataset before analysing repeat purchases.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="story-progress" aria-hidden="true"><span id="story-progress-fill"></span></div>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html#top">
+        <span class="brand-mark" aria-hidden="true">FK</span>
+        <span class="brand-text">Faria Kamal<span class="brand-dot">.</span></span>
+      </a>
+      <span class="nav-note">A PORTFOLIO IN SEVEN CHAPTERS — CONTENTS AT LOWER LEFT</span>
+    </div>
+  </header>
+
+  <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="corner-menu">
+    <span class="menu-toggle-icon" aria-hidden="true">+</span>
+    <span class="menu-toggle-label">Menu</span>
+  </button>
+  <nav class="corner-menu" id="corner-menu" aria-label="Corner index" hidden>
+    <div class="dash-head">
+      <div>
+        <p class="dash-kicker">CONTENTS / SCENE SELECTOR</p>
+        <p class="dash-title">Faria Kamal<em>.</em></p>
+      </div>
+      <button class="corner-menu-close" id="menu-close" type="button" aria-label="Close menu">×</button>
+    </div>
+
+    <dl class="dash-stats">
+      <div class="dash-stat"><dt>Chapters</dt><dd>07</dd></div>
+      <div class="dash-stat"><dt>Studies</dt><dd>03</dd></div>
+      <div class="dash-stat"><dt>Status</dt><dd>Open to roles</dd></div>
+    </dl>
+
+    <p class="dash-section-label">Jump to a chapter</p>
+    <ol class="dash-index">
+      <li><a href="index.html#about"><span class="dash-num">01</span><span class="dash-name">About</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
+      <li><a href="index.html#skills"><span class="dash-num">02</span><span class="dash-name">Toolkit</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
+      <li><a href="index.html#work"><span class="dash-num">03</span><span class="dash-name">Work</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
+      <li><a href="index.html#experience"><span class="dash-num">04</span><span class="dash-name">Experience</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
+      <li><a href="index.html#education"><span class="dash-num">05</span><span class="dash-name">Education</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
+      <li><a href="index.html#now"><span class="dash-num">06</span><span class="dash-name">Now</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
+      <li><a href="index.html#contact"><span class="dash-num">07</span><span class="dash-name">Contact</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
+    </ol>
+
+    <div class="corner-menu-social" id="corner-social"></div>
+  </nav>
+
+  <main id="main">
+    <section class="case-hero">
+      <div class="container">
+        <a class="case-back" href="index.html#work">← Back to selected work</a>
+        <p class="section-kicker mono"><span class="chapter-no">CHAPTER 02</span><span class="kicker-separator">/</span> CASE STUDY · DATA ANALYSIS · IN PROGRESS</p>
+        <h1>Online Retail II — Repeat Purchase &amp; Loyalty</h1>
+        <p class="chapter-mark">SCENE 02 — AN AUDIT BEFORE ANSWERS</p>
+        <p class="case-lede">
+          A retailer does not just want to know what it sold; it wants to know whether customers
+          come back. This project investigates repeat-purchase behaviour in a real transaction
+          dataset — starting with a documented data-quality audit before a single row is removed.
+        </p>
+        <dl class="case-facts">
+          <div class="case-fact"><dt>Dataset</dt><dd>UCI Online Retail II</dd></div>
+          <div class="case-fact"><dt>Combined shape</dt><dd>1,067,371 rows · 8 columns</dd></div>
+          <div class="case-fact"><dt>Sheets</dt><dd>Year 2009-2010 · Year 2010-2011</dd></div>
+          <div class="case-fact"><dt>Stage</dt><dd>Data-quality audit</dd></div>
+          <div class="case-fact"><dt>Code</dt><dd><a href="https://github.com/Faria-Kamal/online-retail-customer-analysis">GitHub repository ↗</a></dd></div>
+        </dl>
+        <p class="story-beats"><span><b>01</b> Questions</span><span><b>02</b> Audit</span><span><b>03</b> Cleaning rules</span><span><b>04</b> Planned analysis</span><span><b>05</b> Limits</span></p>
+      </div>
+    </section>
+
+    <div class="container case-body">
+      <section class="case-section">
+        <h2>The business questions</h2>
+        <p>This project is designed to answer five concrete questions:</p>
+        <ol>
+          <li>What share of identifiable customers purchase more than once?</li>
+          <li>How long does it typically take a customer to return?</li>
+          <li>How does repeat purchasing change over time?</li>
+          <li>Which customer groups behave differently?</li>
+          <li>What can a retailer realistically do with these findings?</li>
+        </ol>
+        <p>
+          The aim is a small number of defensible conclusions — not a wall of charts.
+        </p>
+      </section>
+
+      <section class="case-section">
+        <h2>Where the audit stands</h2>
+        <p>
+          The two annual worksheets were loaded and combined into a single dataframe of
+          1,067,371 rows and 8 columns. The next step was to understand data quality before any
+          cleaning: missing values, exact duplicates, negative quantities, cancellation invoices,
+          unusual prices, date coverage and unique counts.
+        </p>
+        <div class="case-note">
+          <p>
+            <strong>Status:</strong> audit code has been run. Numerical outputs are being checked
+            and will be published here once confirmed — no findings are claimed before verification.
+            The notebook lives in
+            <a href="https://github.com/Faria-Kamal/online-retail-customer-analysis">this repository ↗</a>.
+          </p>
+        </div>
+        <p>
+          One early issue is already clear: roughly 22% of Customer ID values are missing. That
+          matters because a missing ID means a transaction cannot be reliably linked to a person.
+        </p>
+      </section>
+
+      <section class="case-section">
+        <h2>Proposed cleaning rules — and why</h2>
+        <p>These are decisions, not yet final results. Each has a reason:</p>
+        <ul>
+          <li><strong>Keep the original dataset intact.</strong> Analysis uses separate views so no evidence is destroyed.</li>
+          <li><strong>Missing Customer IDs:</strong> retained for overall transaction analysis, excluded from customer-level repeat-purchase calculations. Throwing away 22% of transactions would bias the picture.</li>
+          <li><strong>Cancelled invoices (invoice numbers beginning with C):</strong> kept in the original data but excluded from completed-purchase counts. A cancellation is not a successful purchase.</li>
+          <li><strong>Negative quantities:</strong> investigated as returns/credits rather than silently deleted; excluded from the main purchase dataset once confirmed.</li>
+          <li><strong>Exact duplicate rows:</strong> counted and sampled first, then removable from the cleaned analysis dataset with the count documented.</li>
+          <li><strong>Country:</strong> retained — it may reveal meaningful differences in repeat behaviour.</li>
+          <li><strong>InvoiceDate:</strong> converted to datetime, then used to derive date, month, year and hour for time-based analysis.</li>
+        </ul>
+      </section>
+
+      <section class="case-section">
+        <h2>Planned analysis path</h2>
+        <ol>
+          <li>Finalise the data-quality report with verified counts.</li>
+          <li>Build a clean "completed purchases" dataset and a separate "returns" view.</li>
+          <li>Define a repeat customer explicitly, then calculate frequency and repeat rate.</li>
+          <li>Measure time between purchases and examine monthly/hourly patterns.</li>
+          <li>Compare customer groups and summarise limitations for a retailer audience.</li>
+        </ol>
+        <p>
+          The most important interview point here is definition: how a repeat customer is defined
+          changes the answer, so it must be stated clearly rather than assumed.
+        </p>
+      </section>
+
+      <section class="case-section">
+        <h2>Known limitations</h2>
+        <ul>
+          <li>Customer identity is unavailable for a substantial share of transactions.</li>
+          <li>The data covers a specific retailer and period; generalisation is limited.</li>
+          <li>Cancellations and returns need separate treatment from completed sales.</li>
+          <li>No results are published yet — this page documents method and progress, not outcomes.</li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="container case-nav">
+      <a href="hotel-booking-cancellation.html">← Previous case study: Hotel Booking Cancellation</a>
+      <a href="index.html#work">All work</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Faria Kamal <span class="mono">/ AI &amp; Data Science portfolio</span></p>
+      <p class="mono">Built with HTML, CSS &amp; a little JavaScript · <span id="year"></span></p>
+    </div>
+  </footer>
+</body>
+</html>
