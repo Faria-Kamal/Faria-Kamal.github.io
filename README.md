@@ -58,6 +58,7 @@ message, pushed to GitHub so the history stays readable:
 3. `Add online retail analysis case study`
 4. `Add portfolio website case study`
 5. `Document the published portfolio`
+6. `Link the live site from the case study`
 
 GitHub Pages then serves the `main` branch from the repository root.
 
