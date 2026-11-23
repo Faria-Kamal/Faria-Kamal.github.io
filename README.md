@@ -9,7 +9,6 @@ Live: https://Faria-Kamal.github.io/
 - `index.html` — home
 - `hotel-booking-cancellation.html` — hotel cancellation case study
 - `online-retail-customer-analysis.html` — retail analysis, in progress
-- `portfolio-website.html` — notes on this site
 
 Styling is in `assets/css/style.css`. Contact details and small interactions are in `assets/js/`.
 

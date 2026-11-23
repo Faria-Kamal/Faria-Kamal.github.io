@@ -354,11 +354,11 @@ h3 { font-size: 1.25rem; }
 .skill-card ul { list-style: none; margin: 16px 0 0; padding: 0; display: grid; gap: 8px; }
 .skill-card li { font-size: 16px; color: var(--muted); }
 
-/* ---------- Work: compact visual project cards ---------- */
+/* ---------- Work: two calm, visual project cards ---------- */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
 }
 .project-card {
   display: flex;
@@ -369,13 +369,13 @@ h3 { font-size: 1.25rem; }
 }
 .project-card:hover { border-color: var(--line-strong); }
 .project-visual {
-  height: 140px;
-  padding: 15px 16px;
+  height: 160px;
+  padding: 18px 20px;
   border-bottom: 1px solid var(--line);
   background: var(--paper);
   overflow: hidden;
 }
-.project-body { display: flex; flex-direction: column; flex: 1; padding: 18px 18px 16px; }
+.project-body { display: flex; flex-direction: column; flex: 1; padding: 20px 20px 18px; }
 .project-tag {
   margin: 0 0 8px; font-family: var(--sans); font-size: 8px;
   letter-spacing: 0.13em; text-transform: uppercase; color: var(--faint);
@@ -383,7 +383,7 @@ h3 { font-size: 1.25rem; }
 .project-body h3 { margin: 0 0 8px; font-size: 1.08rem; line-height: 1.25; }
 .project-body h3 a { text-decoration: none; }
 .project-body h3 a:hover { font-style: italic; }
-.project-summary { margin: 0; color: var(--muted); font-size: 15px; line-height: 1.5; }
+.project-summary { margin: 0; color: var(--muted); font-size: 15px; line-height: 1.55; }
 .project-facts {
   display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
   margin: 14px 0 0; background: var(--line);
@@ -408,7 +408,7 @@ h3 { font-size: 1.25rem; }
   font-family: var(--sans); font-size: 9px; color: var(--faint);
 }
 .bar-row b { color: var(--ink); font-weight: normal; text-align: right; }
-.bar-track { display: block; height: 6px; background: var(--line); }
+.bar-track { display: block; height: 8px; background: var(--line); }
 .bar-track i { display: block; height: 100%; background: var(--accent); }
 .bar-row.strong .bar-track i { background: var(--ink); }
 .chart-caption { margin: 0; font-family: var(--sans); font-size: 8px; letter-spacing: 0.14em; color: var(--faint); }
@@ -417,19 +417,7 @@ h3 { font-size: 1.25rem; }
 .audit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; height: 100%; margin: 0; background: var(--line); }
 .audit-grid div { background: var(--paper); padding: 10px; display: flex; flex-direction: column; justify-content: center; }
 .audit-grid dt { font-family: var(--sans); font-size: 8px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--faint); }
-.audit-grid dd { margin: 3px 0 0; font-size: 16px; color: var(--ink); }
-
-/* Portfolio: a quiet wireframe of this site. */
-.wireframe {
-  height: 100%; border: 1px solid var(--line-strong); background: var(--paper-2);
-  padding: 11px; display: flex; flex-direction: column; gap: 6px;
-}
-.wire-head { width: 38%; height: 8px; background: var(--ink); }
-.wire-line { height: 5px; width: 90%; background: var(--line-strong); }
-.wire-line.short { width: 62%; }
-.wire-tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5px; margin-top: auto; }
-.wire-tiles i { height: 18px; background: var(--paper); border: 1px solid var(--line-strong); }
-.wire-foot { height: 4px; width: 50%; background: var(--line-strong); }
+.audit-grid dd { margin: 3px 0 0; font-size: 18px; color: var(--ink); }
 
 /* ---------- Timeline / education / now ---------- */
 .timeline { list-style: none; margin: 0; padding: 0; }
@@ -522,7 +510,7 @@ h3 { font-size: 1.25rem; }
   .hero-grid, .two-col, .contact-inner { grid-template-columns: 1fr; gap: 44px; }
   .hero { padding-top: 80px; }
   .skill-grid { grid-template-columns: 1fr; gap: 28px; }
-  .project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .project-grid { grid-template-columns: 1fr; }
   .dash-kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .dash-body { grid-template-columns: 1fr; }
 }
@@ -532,7 +520,7 @@ h3 { font-size: 1.25rem; }
   .section { padding: 72px 0; }
   h1 { font-size: 2.5rem; }
   .project-grid { grid-template-columns: 1fr; }
-  .project-visual { height: 120px; }
+  .project-visual { height: 130px; }
   .now-item { grid-template-columns: 1fr; gap: 6px; }
   .nav-note { display: none; }
   .menu-toggle { left: 12px; bottom: 12px; }
