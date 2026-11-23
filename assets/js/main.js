@@ -42,8 +42,6 @@
     }).join("");
     var panel = document.querySelector(".contact-panel");
     if (panel) panel.classList.add("contact-approved");
-    var status = document.querySelector(".contact-status");
-    if (status) status.textContent = "CONTACT DETAILS — APPROVED";
   }
   renderContacts(document.getElementById("contact-links"), "contact-link", true);
   renderContacts(document.getElementById("corner-social"), "corner-link", false);

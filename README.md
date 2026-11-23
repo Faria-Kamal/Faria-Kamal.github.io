@@ -33,9 +33,11 @@ python -m http.server 8000
 - Serif body and display type; small monospace labels for chapter numbers and metadata.
 - The normal top navigation is hidden. Navigation lives in a fixed bottom-left "+" button that
   opens a contents / scene selector with three summary tiles and seven chapter tiles.
-- The story layer is deliberately quiet: a "FADE IN" title page, chapters 01–07, scene marks and
-  running orders on each case study, slow reveals, and a 3px hairline progress rail.
-- The "Now" section uses honest placeholders rather than invented watching/reading titles.
+- The story layer is deliberately quiet: a "FADE IN" title page and premise, chapters 01–07,
+  "thread" bridges between chapters and case studies, flashback labels where the timeline cuts
+  back, scene marks and running orders, slow reveals, and a 3px hairline progress rail.
+- The "Now" section holds the owner's real current titles and page numbers, with a real
+  "last updated" date. Nothing there is a claim about skills or experience.
 - Work-in-progress analysis is labelled as such. No metrics, projects or outcomes are invented.
 
 ## Mobile and accessibility
