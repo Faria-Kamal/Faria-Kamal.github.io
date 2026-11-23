@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hotel Booking Cancellation Prediction — Faria Kamal</title>
+  <meta name="description" content="Case study: comparing classifiers and clustering on 119,390 hotel bookings, with honest evaluation of what the model misses.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="story-progress" aria-hidden="true"><span id="story-progress-fill"></span></div>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html#top">
+        <span class="brand-mark" aria-hidden="true">FK</span>
+        <span class="brand-text">Faria Kamal<span class="brand-dot">.</span></span>
+      </a>
+      <span class="nav-note">A PORTFOLIO IN SEVEN CHAPTERS — CONTENTS AT LOWER LEFT</span>
+    </div>
+  </header>
+
+  <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="corner-menu">
+    <span class="menu-toggle-icon" aria-hidden="true">+</span>
+    <span class="menu-toggle-label">Menu</span>
+  </button>
+  <nav class="corner-menu" id="corner-menu" aria-label="Corner index" hidden>
+    <div class="dash-head">
+      <div>
+        <p class="dash-kicker">CONTENTS / SCENE SELECTOR</p>
+        <p class="dash-title">Faria Kamal<em>.</em></p>
+      </div>
+      <button class="corner-menu-close" id="menu-close" type="button" aria-label="Close menu">×</button>
+    </div>
+
+    <dl class="dash-stats">
+      <div class="dash-stat"><dt>Chapters</dt><dd>07</dd></div>
+      <div class="dash-stat"><dt>Studies</dt><dd>03</dd></div>
+      <div class="dash-stat"><dt>Status</dt><dd>Open to roles</dd></div>
+    </dl>
+
+    <p class="dash-section-label">Jump to a chapter</p>
+    <ol class="dash-index">
+      <li><a href="index.html#about"><span class="dash-num">01</span><span class="dash-name">About</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
+      <li><a href="index.html#skills"><span class="dash-num">02</span><span class="dash-name">Toolkit</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
+      <li><a href="index.html#work"><span class="dash-num">03</span><span class="dash-name">Work</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
+      <li><a href="index.html#experience"><span class="dash-num">04</span><span class="dash-name">Experience</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
+      <li><a href="index.html#education"><span class="dash-num">05</span><span class="dash-name">Education</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
+      <li><a href="index.html#now"><span class="dash-num">06</span><span class="dash-name">Now</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
+      <li><a href="index.html#contact"><span class="dash-num">07</span><span class="dash-name">Contact</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
+    </ol>
+
+    <div class="corner-menu-social" id="corner-social"></div>
+  </nav>
+
+  <main id="main">
+    <section class="case-hero">
+      <div class="container">
+        <a class="case-back" href="index.html#work">← Back to selected work</a>
+        <p class="section-kicker mono"><span class="chapter-no">CHAPTER 01</span><span class="kicker-separator">/</span> CASE STUDY · MACHINE LEARNING</p>
+        <h1>Hotel Booking Cancellation Prediction</h1>
+        <p class="chapter-mark">SCENE 01 — A MODEL AND ITS LIMITS</p>
+        <p class="case-lede">
+          A hotel loses revenue when a guest cancels and the room stays empty. This project asks
+          whether booking details available at reservation time can help identify likely
+          cancellations — and how much a model can actually be trusted.
+        </p>
+        <dl class="case-facts">
+          <div class="case-fact"><dt>Dataset</dt><dd>119,390 bookings · 32 columns</dd></div>
+          <div class="case-fact"><dt>Methods</dt><dd>4 classifiers + K-Means</dd></div>
+          <div class="case-fact"><dt>Context</dt><dd>CMP6221 coursework</dd></div>
+          <div class="case-fact"><dt>Status</dt><dd>Completed, documented</dd></div>
+          <div class="case-fact"><dt>Code</dt><dd><a href="https://github.com/Faria-Kamal/hotel-booking-cancellation">GitHub repository ↗</a></dd></div>
+        </dl>
+        <p class="story-beats"><span><b>01</b> Question</span><span><b>02</b> Data &amp; preparation</span><span><b>03</b> Approach</span><span><b>04</b> Results</span><span><b>05</b> Limits</span></p>
+      </div>
+    </section>
+
+    <div class="container case-body">
+      <section class="case-section">
+        <h2>The question</h2>
+        <p>
+          I worked on two problems with one dataset. First, a supervised task: predict whether a
+          booking will be cancelled, comparing four classifiers against a sensible baseline.
+          Second, an unsupervised task: group similar bookings with K-Means to see whether
+          cancellation patterns differ across groups.
+        </p>
+        <p>
+          The important constraint was honesty. A hotel would not use this model in isolation —
+          it could support planning, but the results had to be presented with their limits.
+        </p>
+      </section>
+
+      <section class="case-section">
+        <h2>Data and preparation</h2>
+        <p>
+          The data covers two hotels (a city hotel and a resort hotel) with arrivals from July
+          2015 to August 2017. Each row is one booking. I removed reservation status and its
+          date because they reveal the final outcome and would leak information into the model.
+          I also excluded fields that could change after booking, since they would not be known
+          at prediction time.
+        </p>
+        <p>
+          Cleaning removed identical rows and four rows with missing child counts; missing
+          countries were labelled "Unknown". Negative values and bookings with no guests or
+          nights were removed. I kept zero and unusually high daily rates because they may be
+          genuine and I did not want to silently reshape the data. This left 86,634 rows.
+        </p>
+        <div class="case-note">
+          <p>
+            <strong>Why this matters:</strong> every exclusion has a stated reason. "Tidy numbers"
+            were never the goal — a defensible analysis was.
+          </p>
+        </div>
+      </section>
+
+      <section class="case-section">
+        <h2>Approach</h2>
+        <p>
+          I structured the notebook around five classes so each stage had one responsibility:
+        </p>
+        <ul>
+          <li><strong>DataLoader</strong> — reads the CSV and exposes the dataframe.</li>
+          <li><strong>DataAnalyzer</strong> — inspects types, missing values, duplicates and plots exploratory charts.</li>
+          <li><strong>DataPreprocessor</strong> — cleans rows, engineers features, encodes categories and splits the data.</li>
+          <li><strong>ModelBuilder</strong> — trains and compares models, tunes a Random Forest, and evaluates on held-out test data.</li>
+          <li><strong>BookingClusters</strong> — groups bookings with K-Means and summarises cancellation rates per group.</li>
+        </ul>
+        <p>
+          Feature engineering added total guests, a children/babies indicator, weekend share and
+          a log-transformed daily rate. Scaling was learned from training data only, and the
+          test set was used once, for final evaluation — not for model selection.
+        </p>
+      </section>
+
+      <section class="case-section">
+        <h2>Results</h2>
+        <div class="metric-grid">
+          <div class="metric"><span>TEST ACCURACY</span><strong>79.53%</strong><small>Baseline: 72.32%</small></div>
+          <div class="metric"><span>PRECISION</span><strong>73.22%</strong><small>Most flagged cancellations were real</small></div>
+          <div class="metric"><span>RECALL</span><strong>41.06%</strong><small>Many cancellations were missed</small></div>
+          <div class="metric"><span>F1 SCORE</span><strong>52.61%</strong><small>Balance of precision and recall</small></div>
+        </div>
+        <table class="case-table">
+          <thead>
+            <tr><th>Model</th><th>Accuracy before</th><th>Accuracy after</th><th>F1 after</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Logistic Regression</td><td>75.78%</td><td>76.05%</td><td>0.4335</td></tr>
+            <tr><td>Decision Tree</td><td>75.84%</td><td>75.84%</td><td>0.3949</td></tr>
+            <tr><td>Random Forest</td><td>77.72%</td><td>77.81%</td><td>0.4180</td></tr>
+            <tr><td>KNN</td><td>74.80%</td><td>74.47%</td><td>0.4904</td></tr>
+            <tr><td>Tuned Random Forest</td><td>—</td><td>78.70% validation</td><td>0.4926</td></tr>
+          </tbody>
+        </table>
+        <p>
+          K-Means produced four booking groups with cancellation rates from 15.48% to 36.67%.
+          That suggests booking patterns relate to cancellation behaviour, but it does not prove
+          why guests cancel.
+        </p>
+        <div class="case-note">
+          <p>
+            <strong>Read this honestly:</strong> the model correctly flagged many cancellations,
+            but it missed 2,827 actual cancellations and wrongly flagged 720 completed bookings.
+            Accuracy alone would hide that.
+          </p>
+        </div>
+      </section>
+
+      <section class="case-section">
+        <h2>Limitations and what I learned</h2>
+        <ul>
+          <li>Only historical data was used, so performance on future bookings is unknown.</li>
+          <li>Some bookings may belong to the same guest, but guest identity is not available.</li>
+          <li>The model showed signs of overfitting: 89.05% training score versus 79.53% test score.</li>
+          <li>Recall is too low to rely on alone — next steps would test cost-sensitive thresholds and validate on newer data.</li>
+        </ul>
+        <p>
+          This project taught me to set a baseline first, keep the test set untouched until the
+          end, and report the metric that matches the business cost rather than the one that
+          looks best on a slide.
+        </p>
+        <p class="mono" style="font-size:12px;color:var(--ink-faint)">
+          Evidence: documented notebook,
+          <a href="https://github.com/Faria-Kamal/hotel-booking-cancellation/blob/main/FariaKamal_26172108.pdf">project report ↗</a>,
+          results tables and a recorded walkthrough.
+          Code: <a href="https://github.com/Faria-Kamal/hotel-booking-cancellation">github.com/Faria-Kamal/hotel-booking-cancellation ↗</a>
+        </p>
+      </section>
+    </div>
+
+    <div class="container case-nav">
+      <a href="online-retail-customer-analysis.html">Next case study: Online Retail II →</a>
+      <a href="index.html#work">← All work</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Faria Kamal <span class="mono">/ AI &amp; Data Science portfolio</span></p>
+      <p class="mono">Built with HTML, CSS &amp; a little JavaScript · <span id="year"></span></p>
+    </div>
+  </footer>
+</body>
+</html>
