@@ -30,13 +30,13 @@
   <nav class="corner-menu" id="corner-menu" aria-label="Corner index" hidden>
     <div class="dash-head">
       <div>
-        <p class="dash-kicker">CONTENTS / SCENE SELECTOR</p>
+        <p class="dash-kicker">INDEX</p>
         <p class="dash-title">Faria Kamal<em>.</em></p>
       </div>
       <button class="corner-menu-close" id="menu-close" type="button" aria-label="Close menu">×</button>
     </div>
 
-    <p class="dash-section-label">Jump to a section</p>
+    <div class="dash-section-label"><span>NO</span><span>SECTION</span><span>NO</span><span>SECTION</span></div>
     <ol class="dash-index">
       <li><a href="#about"><span class="dash-num">01</span><span class="dash-name">About</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
       <li><a href="#skills"><span class="dash-num">02</span><span class="dash-name">Toolkit</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
@@ -161,51 +161,77 @@
           <p class="section-intro">Each case study explains the question, the method, the result and the limitations.</p>
         </div>
 
-        <div class="project-list">
-          <a class="project-card reveal" href="hotel-booking-cancellation.html">
-            <div class="project-index mono">P / 01</div>
-            <div class="project-body">
-              <p class="project-tag">Machine learning · Classification · Coursework</p>
-              <h3>Hotel Booking Cancellation Prediction</h3>
-              <p class="project-summary">
-                Compared four classifiers on 119,390 hotel bookings, then tuned a Random Forest
-                and grouped similar bookings with K-Means. The honest finding: 79.53% test
-                accuracy against a 72.32% baseline, but only 41.06% of cancellations detected.
-              </p>
-              <p class="project-evidence mono">CODE — <a href="https://github.com/Faria-Kamal/hotel-booking-cancellation">github.com/Faria-Kamal/hotel-booking-cancellation ↗</a></p>
+        <div class="project-grid">
+          <article class="project-card reveal">
+            <div class="project-visual" aria-hidden="true">
+              <div class="mini-chart">
+                <div class="bar-row"><span>BASE</span><span class="bar-track"><i style="width:72.32%"></i></span><b>72.32%</b></div>
+                <div class="bar-row strong"><span>MODEL</span><span class="bar-track"><i style="width:79.53%"></i></span><b>79.53%</b></div>
+                <p class="chart-caption">TEST ACCURACY</p>
+              </div>
             </div>
-            <span class="project-arrow" aria-hidden="true">↗</span>
-          </a>
+            <div class="project-body">
+              <p class="project-tag">P / 01 · MACHINE LEARNING</p>
+              <h3><a href="hotel-booking-cancellation.html">Hotel Booking Cancellation <span aria-hidden="true">↗</span></a></h3>
+              <p class="project-summary">Four classifiers compared on 119,390 bookings. Better accuracy, but weak recall — stated plainly.</p>
+              <dl class="project-facts">
+                <div><dt>Accuracy</dt><dd>79.53%</dd></div>
+                <div><dt>Recall</dt><dd>41.06%</dd></div>
+              </dl>
+              <p class="project-evidence mono">
+                <a href="https://github.com/Faria-Kamal/hotel-booking-cancellation">CODE ↗</a>
+                <a href="https://github.com/Faria-Kamal/hotel-booking-cancellation/blob/main/FariaKamal_26172108.pdf">REPORT ↗</a>
+              </p>
+            </div>
+          </article>
 
-          <a class="project-card reveal" href="online-retail-customer-analysis.html">
-            <div class="project-index mono">P / 02</div>
-            <div class="project-body">
-              <p class="project-tag">Data analysis · Customer behaviour · In progress</p>
-              <h3>Online Retail II — Repeat Purchase &amp; Loyalty</h3>
-              <p class="project-summary">
-                Working through a 1.07M-row UCI retail dataset to understand whether customers
-                return. Currently at the data-quality audit stage — documenting every cleaning
-                decision before any analysis begins.
-              </p>
-              <p class="project-evidence mono">CODE — <a href="https://github.com/Faria-Kamal/online-retail-customer-analysis">github.com/Faria-Kamal/online-retail-customer-analysis ↗</a></p>
+          <article class="project-card reveal">
+            <div class="project-visual" aria-hidden="true">
+              <dl class="audit-grid">
+                <div><dt>Rows</dt><dd>1.07M</dd></div>
+                <div><dt>Columns</dt><dd>8</dd></div>
+                <div><dt>Sheets</dt><dd>2</dd></div>
+                <div><dt>Missing ID</dt><dd>~22%</dd></div>
+              </dl>
             </div>
-            <span class="project-arrow" aria-hidden="true">↗</span>
-          </a>
+            <div class="project-body">
+              <p class="project-tag">P / 02 · DATA ANALYSIS · IN PROGRESS</p>
+              <h3><a href="online-retail-customer-analysis.html">Online Retail II — Repeat Purchase <span aria-hidden="true">↗</span></a></h3>
+              <p class="project-summary">A documented data-quality audit of 1,067,371 transactions. Cleaning rules come before findings.</p>
+              <dl class="project-facts">
+                <div><dt>Stage</dt><dd>Audit</dd></div>
+                <div><dt>Results</dt><dd>Not yet</dd></div>
+              </dl>
+              <p class="project-evidence mono">
+                <a href="https://github.com/Faria-Kamal/online-retail-customer-analysis">CODE ↗</a>
+              </p>
+            </div>
+          </article>
 
-          <a class="project-card reveal" href="portfolio-website.html">
-            <div class="project-index mono">P / 03</div>
-            <div class="project-body">
-              <p class="project-tag">Web development · Design · Git workflow</p>
-              <h3>Portfolio Website</h3>
-              <p class="project-summary">
-                This site. A quiet, mobile-friendly portfolio with no framework or build step,
-                designed around honest claims and published through GitHub Pages in small,
-                traceable commits.
-              </p>
-              <p class="project-evidence mono">DETAILS — design notes, testing and workflow in the case study ↗</p>
+          <article class="project-card reveal">
+            <div class="project-visual" aria-hidden="true">
+              <div class="wireframe">
+                <span class="wire-head"></span>
+                <span class="wire-line"></span>
+                <span class="wire-line short"></span>
+                <span class="wire-tiles"><i></i><i></i><i></i></span>
+                <span class="wire-foot"></span>
+              </div>
             </div>
-            <span class="project-arrow" aria-hidden="true">↗</span>
-          </a>
+            <div class="project-body">
+              <p class="project-tag">P / 03 · WEB DEVELOPMENT</p>
+              <h3><a href="portfolio-website.html">Portfolio Website <span aria-hidden="true">↗</span></a></h3>
+              <p class="project-summary">No framework, no build step. Published one small commit at a time, with every claim checked.</p>
+              <dl class="project-facts">
+                <div><dt>Stack</dt><dd>HTML/CSS/JS</dd></div>
+                <div><dt>Hosting</dt><dd>Pages</dd></div>
+              </dl>
+              <p class="project-evidence mono">
+                <a href="portfolio-website.html">CASE STUDY ↗</a>
+                <a href="https://github.com/Faria-Kamal/Faria-Kamal.github.io">SOURCE ↗</a>
+              </p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
