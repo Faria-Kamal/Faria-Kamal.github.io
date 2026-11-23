@@ -46,7 +46,7 @@
   renderContacts(document.getElementById("contact-links"), "contact-link", true);
   renderContacts(document.getElementById("corner-social"), "corner-link", false);
 
-  // Bottom-left corner index menu.
+  // Full-page "At a glance" dashboard.
   var toggle = document.getElementById("menu-toggle");
   var menu = document.getElementById("corner-menu");
   var closeBtn = document.getElementById("menu-close");
@@ -55,17 +55,21 @@
     if (!toggle || !menu) return;
     menu.hidden = !open;
     toggle.setAttribute("aria-expanded", String(open));
-    var icon = toggle.querySelector(".menu-toggle-icon");
+    toggle.setAttribute("aria-label", open ? "Close the overview" : "Open the overview");
     var label = toggle.querySelector(".menu-toggle-label");
-    if (icon) icon.textContent = open ? "×" : "+";
-    if (label) label.textContent = open ? "Close" : "Index";
+    if (label) label.textContent = open ? "Close" : "At a glance";
+    document.body.classList.toggle("menu-open", open);
+    if (open && closeBtn) closeBtn.focus();
   }
 
   if (toggle && menu) {
     toggle.addEventListener("click", function () {
       setMenu(menu.hidden);
     });
-    if (closeBtn) closeBtn.addEventListener("click", function () { setMenu(false); });
+    if (closeBtn) closeBtn.addEventListener("click", function () {
+      setMenu(false);
+      toggle.focus();
+    });
 
     menu.querySelectorAll("a").forEach(function (link) {
       link.addEventListener("click", function () { setMenu(false); });

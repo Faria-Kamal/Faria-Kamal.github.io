@@ -1,76 +1,33 @@
-# Faria Kamal — AI & Data Science Portfolio
+# Faria Kamal — AI & Data Science
 
-A small, static portfolio built with plain HTML, CSS and a little JavaScript. No framework,
-no package manager and no build step: every file can be served directly by GitHub Pages.
+A small static portfolio. Plain HTML, CSS and JavaScript. No build step.
 
-**Live site:** https://Faria-Kamal.github.io/
+Live: https://Faria-Kamal.github.io/
 
 ## Pages
 
-| File | What it is |
-| --- | --- |
-| `index.html` | Home — About, Toolkit, Work, Experience, Education, Now, Contact |
-| `hotel-booking-cancellation.html` | Case study 01: hotel cancellation prediction (completed coursework) |
-| `online-retail-customer-analysis.html` | Case study 02: retail loyalty analysis (in progress) |
-| `portfolio-website.html` | Case study 03: this site — design, mobile testing and Git workflow |
+- `index.html` — home
+- `hotel-booking-cancellation.html` — hotel cancellation case study
+- `online-retail-customer-analysis.html` — retail analysis, in progress
+- `portfolio-website.html` — notes on this site
 
-`assets/css/style.css` holds all styling, with colours and type defined as CSS variables at the
-top. `assets/js/config.js` holds the approved contact details in one place. `assets/js/main.js`
-handles the contents panel, contact-link rendering, the progress rail and scroll reveal.
+Styling is in `assets/css/style.css`. Contact details and small interactions are in `assets/js/`.
 
 ## Run locally
 
-Open `index.html` in a browser, or serve the folder if you have Python available:
+Open `index.html`, or:
 
 ```powershell
 python -m http.server 8000
-# then open http://localhost:8000
 ```
 
-## Design notes
+Then open http://localhost:8000.
 
-- Sober, low-contrast palette: cool grey-green paper, slate ink and a muted sage accent.
-- Serif body and display type; small monospace labels for chapter numbers and metadata.
-- The normal top navigation is hidden. Navigation lives in a small fixed bottom-left "Index" text
-  link that opens a compact two-column table of seven sections and a contact-link row. It is plain
-  text, not a button or toggle box.
-- The story layer is deliberately quiet: a "FADE IN" title page, chapters 01–07, slow reveals and
-  a 3px hairline progress rail. Scene marks, running orders and connective paragraphs were removed
-  after review; "Intermission" and "Final scene" are unchanged.
-- The Work section is three aligned visual cards. Each has a small data drawing made only from
-  verified numbers (accuracy bars, audit facts, a layout wireframe), a one-line summary, two fact
-  cells and a short paper-trail link row. No fabricated screenshots or results.
-- The "Now" section holds the owner's real current titles and page numbers, with a real
-  "last updated" date. Nothing there is a claim about skills or experience.
-- Work-in-progress analysis is labelled as such. No metrics, projects or outcomes are invented.
+## Notes
 
-## Mobile and accessibility
+- Newsreader for text, IBM Plex Sans for labels.
+- The lower-left "At a glance" button opens a full-page index.
+- Claims come from a CV, report or repository. Work in progress is labelled.
+- Contact details were added with permission.
 
-Two breakpoints: at 900px the multi-column layouts collapse to one column, and at 600px type
-scales down, project cards lose their index numbers, the contents panel becomes a single column,
-and the progress rail is hidden. Links are large enough to tap, images are constrained with
-`max-width: 100%`, and a skip link gives keyboard users a direct route to the main content.
-
-Every page was opened in Chromium with no console errors and scored **100 Accessibility** and
-**100 Best Practices** in Lighthouse. Motion respects the visitor's reduced-motion setting.
-
-## Publishing workflow
-
-This repository was built one page at a time. Each meaningful change is a commit with a short
-message, pushed to GitHub so the history stays readable:
-
-1. `Add home page and shared assets`
-2. `Add hotel cancellation case study`
-3. `Add online retail analysis case study`
-4. `Add portfolio website case study`
-5. `Document the published portfolio`
-6. `Link the live site from the case study`
-
-GitHub Pages then serves the `main` branch from the repository root.
-
-## Principles
-
-- Every claim on the site traces to a CV, report, results file or repository.
-- Evidence and limitations are shown alongside results.
-- Contact details appear only after explicit approval.
-- Free hosting, no build pipeline, no paid domain required.
+GitHub Pages serves `main` from the repository root.

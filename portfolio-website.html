@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Portfolio Website — Faria Kamal</title>
   <meta name="description" content="Case study: designing and building an evidence-led, mobile-friendly AI and data science portfolio with plain HTML, CSS and JavaScript.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="assets/js/config.js"></script>
   <script src="assets/js/main.js" defer></script>
@@ -19,41 +22,67 @@
         <span class="brand-mark" aria-hidden="true">FK</span>
         <span class="brand-text">Faria Kamal<span class="brand-dot">.</span></span>
       </a>
-      <span class="nav-note">A PORTFOLIO IN SEVEN CHAPTERS — CONTENTS AT LOWER LEFT</span>
+      <span class="nav-note">AI &amp; DATA SCIENCE · 2026</span>
     </div>
   </header>
 
-  <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="corner-menu">
-    <span class="menu-toggle-label">Index</span>
+  <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="corner-menu" aria-label="Open the overview">
+    <span class="menu-toggle-label">At a glance</span>
   </button>
-  <nav class="corner-menu" id="corner-menu" aria-label="Corner index" hidden>
+  <nav class="corner-menu" id="corner-menu" aria-label="Site overview" hidden>
     <div class="dash-head">
       <div>
-        <p class="dash-kicker">INDEX</p>
-        <p class="dash-title">Faria Kamal<em>.</em></p>
+        <p class="dash-kicker">FARIA KAMAL / OVERVIEW</p>
+        <p class="dash-title">At a glance<em>.</em></p>
       </div>
-      <button class="corner-menu-close" id="menu-close" type="button" aria-label="Close menu">×</button>
+      <button class="corner-menu-close" id="menu-close" type="button" aria-label="Close overview">Close ×</button>
     </div>
 
-    <div class="dash-section-label"><span>NO</span><span>SECTION</span><span>NO</span><span>SECTION</span></div>
-    <ol class="dash-index">
-      <li><a href="index.html#about"><span class="dash-num">01</span><span class="dash-name">About</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
-      <li><a href="index.html#skills"><span class="dash-num">02</span><span class="dash-name">Toolkit</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
-      <li><a href="index.html#work"><span class="dash-num">03</span><span class="dash-name">Work</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
-      <li><a href="index.html#experience"><span class="dash-num">04</span><span class="dash-name">Experience</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
-      <li><a href="index.html#education"><span class="dash-num">05</span><span class="dash-name">Education</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
-      <li><a href="index.html#now"><span class="dash-num">06</span><span class="dash-name">Now</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
-      <li><a href="index.html#contact"><span class="dash-num">07</span><span class="dash-name">Contact</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
-    </ol>
+    <dl class="dash-kpis">
+      <div><dt>Projects</dt><dd>03</dd></div>
+      <div><dt>Sections</dt><dd>07</dd></div>
+      <div><dt>Focus</dt><dd>MSc AI</dd></div>
+      <div><dt>Links</dt><dd>03</dd></div>
+    </dl>
 
-    <div class="corner-menu-social" id="corner-social"></div>
+    <div class="dash-body">
+      <section class="dash-panel" aria-labelledby="dash-index-title">
+        <div class="dash-panel-head"><h2 id="dash-index-title">Index</h2><span>01 — 07</span></div>
+        <div class="dash-section-label"><span>NO</span><span>SECTION</span><span class="dash-note-head">NOTE</span><span>GO</span></div>
+        <ol class="dash-index">
+          <li><a href="index.html#about"><span class="dash-num">01</span><span class="dash-name">About</span><span class="dash-note">short version</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
+          <li><a href="index.html#skills"><span class="dash-num">02</span><span class="dash-name">Toolkit</span><span class="dash-note">tools &amp; limits</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
+          <li><a href="index.html#work"><span class="dash-num">03</span><span class="dash-name">Work</span><span class="dash-note">proof</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
+          <li><a href="index.html#experience"><span class="dash-num">04</span><span class="dash-name">Experience</span><span class="dash-note">roles</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
+          <li><a href="index.html#education"><span class="dash-num">05</span><span class="dash-name">Education</span><span class="dash-note">study</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
+          <li><a href="index.html#now"><span class="dash-num">06</span><span class="dash-name">Now</span><span class="dash-note">life</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
+          <li><a href="index.html#contact"><span class="dash-num">07</span><span class="dash-name">Contact</span><span class="dash-note">hello</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
+        </ol>
+      </section>
+
+      <aside>
+        <section class="dash-panel" aria-labelledby="dash-work-title">
+          <div class="dash-panel-head"><h2 id="dash-work-title">Paper trail</h2><span>03</span></div>
+          <ol class="dash-projects">
+            <li><a href="hotel-booking-cancellation.html"><span>01</span><b>Cancellation model</b><i aria-hidden="true">↗</i></a></li>
+            <li><a href="online-retail-customer-analysis.html"><span>02</span><b>Retail audit</b><i aria-hidden="true">↗</i></a></li>
+            <li><a href="portfolio-website.html"><span>03</span><b>This website</b><i aria-hidden="true">↗</i></a></li>
+          </ol>
+        </section>
+        <section class="dash-panel" aria-labelledby="dash-contact-title">
+          <div class="dash-panel-head"><h2 id="dash-contact-title">Say hello</h2><span>03</span></div>
+          <div class="corner-menu-social" id="corner-social"></div>
+        </section>
+        <p class="dash-foot">Evidence first. Updated 23 November 2026.</p>
+      </aside>
+    </div>
   </nav>
 
   <main id="main">
     <section class="case-hero">
       <div class="container">
         <a class="case-back" href="index.html#work">← All work</a>
-        <p class="section-kicker mono"><span class="chapter-no">CHAPTER 03</span><span class="kicker-separator">/</span> CASE STUDY · WEB DEVELOPMENT</p>
+        <p class="section-kicker">CASE STUDY · WEB DEVELOPMENT</p>
         <h1>Portfolio Website</h1>
         <p class="case-lede">
           A quiet, evidence-led portfolio for AI and data science roles — built without a framework,
@@ -88,21 +117,15 @@
       <section class="case-section">
         <h2>Design direction</h2>
         <p>
-          The visual reference I was given had a simple vintage feel: low colour contrast, serif
-          type, an elegant index tucked into the lower-left corner, and a small “now” section for
-          what the owner was watching and reading. The reference URL is now a parked advertising
-          page, so I worked from that description rather than copying a live layout.
+          The reference had a vintage feel: low contrast, serif type, a quiet lower-left index and
+          a small "now" section. Its URL is now a parked ad page, so I worked from the description.
         </p>
         <p>
-          After feedback, the palette moved from warm paper tones to a calmer, more sober scheme:
-          soft grey-green paper, slate ink and a muted sage accent. The corner index became a small
-          dashboard-style control panel with three summary tiles and seven section tiles.
-
-          The final layer is narrative. The seven sections are introduced as chapters, the corner
-          panel is a contents / scene selector, each case study opens with a scene mark and a
-          running order, and a 3px hairline rail shows how far you are through the story. It is all
-          typography and restraint rather than effect: reveals are slow, there is no autoplay, and
-          every animation is disabled when the visitor asks for reduced motion.
+          After feedback, the palette settled on soft grey-green paper, slate ink and a muted sage
+          accent. Newsreader carries the voice; IBM Plex Sans handles small labels. The menu became
+          a full-page "At a glance" dashboard: four KPI tiles, an index table, the three case
+          studies and the contact links. A 3px hairline shows reading progress. Nothing autoplays,
+          and reduced motion is respected.
         </p>
         <div class="case-note">
           <p>
@@ -136,15 +159,14 @@
       <section class="case-section">
         <h2>Mobile friendliness</h2>
         <p>
-          The layout uses CSS Grid with two breakpoints. At 900px the hero, two-column sections,
-          skills and contact panels collapse into a single column. At 600px the container narrows,
-          type scales down, project cards drop their index number, and the dashboard menu becomes
-          a single-column panel with smaller padding.
+          CSS Grid has two breakpoints. At 900px the hero, two-column sections, skills and contact
+          panels become one column, and the dashboard stacks. At 600px the container narrows, type
+          scales down and the index hides its note column.
         </p>
         <p>
-          The fixed “+” menu stays reachable at the lower left on small screens, tile links are
-          large enough to tap, and images are constrained with <code>max-width: 100%</code>.
-          A skip link gives keyboard users a direct route to the main content.
+          The "At a glance" trigger stays reachable at the lower left, links are large enough to
+          tap, and images stay within their container. A skip link gives keyboard users a direct
+          route to the main content.
         </p>
       </section>
 
@@ -178,8 +200,7 @@
           deployment setup as separate steps rather than one opaque upload.
         </p>
         <p>
-          That is exactly how it was published: five small commits, each pushed separately, then
-          GitHub Pages serving the <code>main</code> branch from the repository root.
+          GitHub Pages serves the <code>main</code> branch from the repository root.
         </p>
         <p class="mono" style="font-size:12px;color:var(--faint)">
           Live: <a href="https://Faria-Kamal.github.io/">Faria-Kamal.github.io</a> · Source:

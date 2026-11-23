@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Online Retail II — Repeat Purchase &amp; Loyalty — Faria Kamal</title>
   <meta name="description" content="Work-in-progress case study: auditing the UCI Online Retail II dataset before analysing repeat purchases.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="assets/js/config.js"></script>
   <script src="assets/js/main.js" defer></script>
@@ -19,46 +22,71 @@
         <span class="brand-mark" aria-hidden="true">FK</span>
         <span class="brand-text">Faria Kamal<span class="brand-dot">.</span></span>
       </a>
-      <span class="nav-note">A PORTFOLIO IN SEVEN CHAPTERS — CONTENTS AT LOWER LEFT</span>
+      <span class="nav-note">AI &amp; DATA SCIENCE · 2026</span>
     </div>
   </header>
 
-  <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="corner-menu">
-    <span class="menu-toggle-label">Index</span>
+  <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="corner-menu" aria-label="Open the overview">
+    <span class="menu-toggle-label">At a glance</span>
   </button>
-  <nav class="corner-menu" id="corner-menu" aria-label="Corner index" hidden>
+  <nav class="corner-menu" id="corner-menu" aria-label="Site overview" hidden>
     <div class="dash-head">
       <div>
-        <p class="dash-kicker">INDEX</p>
-        <p class="dash-title">Faria Kamal<em>.</em></p>
+        <p class="dash-kicker">FARIA KAMAL / OVERVIEW</p>
+        <p class="dash-title">At a glance<em>.</em></p>
       </div>
-      <button class="corner-menu-close" id="menu-close" type="button" aria-label="Close menu">×</button>
+      <button class="corner-menu-close" id="menu-close" type="button" aria-label="Close overview">Close ×</button>
     </div>
 
-    <div class="dash-section-label"><span>NO</span><span>SECTION</span><span>NO</span><span>SECTION</span></div>
-    <ol class="dash-index">
-      <li><a href="index.html#about"><span class="dash-num">01</span><span class="dash-name">About</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
-      <li><a href="index.html#skills"><span class="dash-num">02</span><span class="dash-name">Toolkit</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
-      <li><a href="index.html#work"><span class="dash-num">03</span><span class="dash-name">Work</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
-      <li><a href="index.html#experience"><span class="dash-num">04</span><span class="dash-name">Experience</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
-      <li><a href="index.html#education"><span class="dash-num">05</span><span class="dash-name">Education</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
-      <li><a href="index.html#now"><span class="dash-num">06</span><span class="dash-name">Now</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
-      <li><a href="index.html#contact"><span class="dash-num">07</span><span class="dash-name">Contact</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
-    </ol>
+    <dl class="dash-kpis">
+      <div><dt>Projects</dt><dd>03</dd></div>
+      <div><dt>Sections</dt><dd>07</dd></div>
+      <div><dt>Focus</dt><dd>MSc AI</dd></div>
+      <div><dt>Links</dt><dd>03</dd></div>
+    </dl>
 
-    <div class="corner-menu-social" id="corner-social"></div>
+    <div class="dash-body">
+      <section class="dash-panel" aria-labelledby="dash-index-title">
+        <div class="dash-panel-head"><h2 id="dash-index-title">Index</h2><span>01 — 07</span></div>
+        <div class="dash-section-label"><span>NO</span><span>SECTION</span><span class="dash-note-head">NOTE</span><span>GO</span></div>
+        <ol class="dash-index">
+          <li><a href="index.html#about"><span class="dash-num">01</span><span class="dash-name">About</span><span class="dash-note">short version</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
+          <li><a href="index.html#skills"><span class="dash-num">02</span><span class="dash-name">Toolkit</span><span class="dash-note">tools &amp; limits</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
+          <li><a href="index.html#work"><span class="dash-num">03</span><span class="dash-name">Work</span><span class="dash-note">proof</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
+          <li><a href="index.html#experience"><span class="dash-num">04</span><span class="dash-name">Experience</span><span class="dash-note">roles</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
+          <li><a href="index.html#education"><span class="dash-num">05</span><span class="dash-name">Education</span><span class="dash-note">study</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
+          <li><a href="index.html#now"><span class="dash-num">06</span><span class="dash-name">Now</span><span class="dash-note">life</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
+          <li><a href="index.html#contact"><span class="dash-num">07</span><span class="dash-name">Contact</span><span class="dash-note">hello</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
+        </ol>
+      </section>
+
+      <aside>
+        <section class="dash-panel" aria-labelledby="dash-work-title">
+          <div class="dash-panel-head"><h2 id="dash-work-title">Paper trail</h2><span>03</span></div>
+          <ol class="dash-projects">
+            <li><a href="hotel-booking-cancellation.html"><span>01</span><b>Cancellation model</b><i aria-hidden="true">↗</i></a></li>
+            <li><a href="online-retail-customer-analysis.html"><span>02</span><b>Retail audit</b><i aria-hidden="true">↗</i></a></li>
+            <li><a href="portfolio-website.html"><span>03</span><b>This website</b><i aria-hidden="true">↗</i></a></li>
+          </ol>
+        </section>
+        <section class="dash-panel" aria-labelledby="dash-contact-title">
+          <div class="dash-panel-head"><h2 id="dash-contact-title">Say hello</h2><span>03</span></div>
+          <div class="corner-menu-social" id="corner-social"></div>
+        </section>
+        <p class="dash-foot">Evidence first. Updated 23 November 2026.</p>
+      </aside>
+    </div>
   </nav>
 
   <main id="main">
     <section class="case-hero">
       <div class="container">
         <a class="case-back" href="index.html#work">← Back to selected work</a>
-        <p class="section-kicker mono"><span class="chapter-no">CHAPTER 02</span><span class="kicker-separator">/</span> CASE STUDY · DATA ANALYSIS · IN PROGRESS</p>
+        <p class="section-kicker">CASE STUDY · DATA ANALYSIS · IN PROGRESS</p>
         <h1>Online Retail II — Repeat Purchase &amp; Loyalty</h1>
         <p class="case-lede">
-          A retailer does not just want to know what it sold; it wants to know whether customers
-          come back. This project investigates repeat-purchase behaviour in a real transaction
-          dataset — starting with a documented data-quality audit before a single row is removed.
+          Do customers come back? Starting with a documented audit of 1.07M retail transactions —
+          results come after the cleaning rules.
         </p>
         <dl class="case-facts">
           <div class="case-fact"><dt>Dataset</dt><dd>UCI Online Retail II</dd></div>
@@ -89,22 +117,19 @@
       <section class="case-section">
         <h2>Where the audit stands</h2>
         <p>
-          The two annual worksheets were loaded and combined into a single dataframe of
-          1,067,371 rows and 8 columns. The next step was to understand data quality before any
-          cleaning: missing values, exact duplicates, negative quantities, cancellation invoices,
-          unusual prices, date coverage and unique counts.
+          Two annual sheets combined into 1,067,371 rows and 8 columns. Before cleaning, I checked
+          missing values, duplicates, negatives, cancellations, prices, dates and unique counts.
         </p>
         <div class="case-note">
           <p>
-            <strong>Status:</strong> audit code has been run. Numerical outputs are being checked
-            and will be published here once confirmed — no findings are claimed before verification.
-            The notebook lives in
+            <strong>Status:</strong> audit code has run. Outputs are being checked; nothing is
+            claimed before verification. Notebook in
             <a href="https://github.com/Faria-Kamal/online-retail-customer-analysis">this repository ↗</a>.
           </p>
         </div>
         <p>
-          One early issue is already clear: roughly 22% of Customer ID values are missing. That
-          matters because a missing ID means a transaction cannot be reliably linked to a person.
+          One clear issue: roughly 22% of Customer IDs are missing, so those transactions cannot
+          be reliably tied to a person.
         </p>
       </section>
 
@@ -132,8 +157,7 @@
           <li>Compare customer groups and summarise limitations for a retailer audience.</li>
         </ol>
         <p>
-          The most important interview point here is definition: how a repeat customer is defined
-          changes the answer, so it must be stated clearly rather than assumed.
+          Definition first: how "repeat customer" is defined changes the answer.
         </p>
       </section>
 
@@ -158,8 +182,8 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>Faria Kamal <span class="mono">/ AI &amp; Data Science portfolio</span></p>
-      <p class="mono">Built with HTML, CSS &amp; a little JavaScript · <span id="year"></span></p>
+      <p>Faria Kamal <span class="mono">— AI &amp; Data Science</span></p>
+      <p class="mono">HTML · CSS · a little JavaScript · <span id="year"></span></p>
     </div>
   </footer>
 </body>

@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Faria Kamal — AI &amp; Data Science Portfolio</title>
   <meta name="description" content="Faria Kamal — MSc Artificial Intelligence student building practical, evidence-led data science projects.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="assets/js/config.js"></script>
   <script src="assets/js/main.js" defer></script>
@@ -19,35 +22,61 @@
         <span class="brand-mark" aria-hidden="true">FK</span>
         <span class="brand-text">Faria Kamal<span class="brand-dot">.</span></span>
       </a>
-      <span class="nav-note">A PORTFOLIO IN SEVEN CHAPTERS — CONTENTS AT LOWER LEFT</span>
+      <span class="nav-note">AI &amp; DATA SCIENCE · 2026</span>
     </div>
   </header>
 
-  <!-- Bottom-left corner index -->
-  <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="corner-menu">
-    <span class="menu-toggle-label">Index</span>
+  <!-- Full-page dashboard -->
+  <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="corner-menu" aria-label="Open the overview">
+    <span class="menu-toggle-label">At a glance</span>
   </button>
-  <nav class="corner-menu" id="corner-menu" aria-label="Corner index" hidden>
+  <nav class="corner-menu" id="corner-menu" aria-label="Site overview" hidden>
     <div class="dash-head">
       <div>
-        <p class="dash-kicker">INDEX</p>
-        <p class="dash-title">Faria Kamal<em>.</em></p>
+        <p class="dash-kicker">FARIA KAMAL / OVERVIEW</p>
+        <p class="dash-title">At a glance<em>.</em></p>
       </div>
-      <button class="corner-menu-close" id="menu-close" type="button" aria-label="Close menu">×</button>
+      <button class="corner-menu-close" id="menu-close" type="button" aria-label="Close overview">Close ×</button>
     </div>
 
-    <div class="dash-section-label"><span>NO</span><span>SECTION</span><span>NO</span><span>SECTION</span></div>
-    <ol class="dash-index">
-      <li><a href="#about"><span class="dash-num">01</span><span class="dash-name">About</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
-      <li><a href="#skills"><span class="dash-num">02</span><span class="dash-name">Toolkit</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
-      <li><a href="#work"><span class="dash-num">03</span><span class="dash-name">Work</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
-      <li><a href="#experience"><span class="dash-num">04</span><span class="dash-name">Experience</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
-      <li><a href="#education"><span class="dash-num">05</span><span class="dash-name">Education</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
-      <li><a href="#now"><span class="dash-num">06</span><span class="dash-name">Now</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
-      <li><a href="#contact"><span class="dash-num">07</span><span class="dash-name">Contact</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
-    </ol>
+    <dl class="dash-kpis">
+      <div><dt>Projects</dt><dd>03</dd></div>
+      <div><dt>Sections</dt><dd>07</dd></div>
+      <div><dt>Focus</dt><dd>MSc AI</dd></div>
+      <div><dt>Links</dt><dd>03</dd></div>
+    </dl>
 
-    <div class="corner-menu-social" id="corner-social"></div>
+    <div class="dash-body">
+      <section class="dash-panel" aria-labelledby="dash-index-title">
+        <div class="dash-panel-head"><h2 id="dash-index-title">Index</h2><span>01 — 07</span></div>
+        <div class="dash-section-label"><span>NO</span><span>SECTION</span><span class="dash-note-head">NOTE</span><span>GO</span></div>
+        <ol class="dash-index">
+          <li><a href="#about"><span class="dash-num">01</span><span class="dash-name">About</span><span class="dash-note">short version</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
+          <li><a href="#skills"><span class="dash-num">02</span><span class="dash-name">Toolkit</span><span class="dash-note">tools &amp; limits</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
+          <li><a href="#work"><span class="dash-num">03</span><span class="dash-name">Work</span><span class="dash-note">proof</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
+          <li><a href="#experience"><span class="dash-num">04</span><span class="dash-name">Experience</span><span class="dash-note">roles</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
+          <li><a href="#education"><span class="dash-num">05</span><span class="dash-name">Education</span><span class="dash-note">study</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
+          <li><a href="#now"><span class="dash-num">06</span><span class="dash-name">Now</span><span class="dash-note">life</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
+          <li><a href="#contact"><span class="dash-num">07</span><span class="dash-name">Contact</span><span class="dash-note">hello</span><span class="dash-arrow" aria-hidden="true">↗</span></a></li>
+        </ol>
+      </section>
+
+      <aside>
+        <section class="dash-panel" aria-labelledby="dash-work-title">
+          <div class="dash-panel-head"><h2 id="dash-work-title">Paper trail</h2><span>03</span></div>
+          <ol class="dash-projects">
+            <li><a href="hotel-booking-cancellation.html"><span>01</span><b>Cancellation model</b><i aria-hidden="true">↗</i></a></li>
+            <li><a href="online-retail-customer-analysis.html"><span>02</span><b>Retail audit</b><i aria-hidden="true">↗</i></a></li>
+            <li><a href="portfolio-website.html"><span>03</span><b>This website</b><i aria-hidden="true">↗</i></a></li>
+          </ol>
+        </section>
+        <section class="dash-panel" aria-labelledby="dash-contact-title">
+          <div class="dash-panel-head"><h2 id="dash-contact-title">Say hello</h2><span>03</span></div>
+          <div class="corner-menu-social" id="corner-social"></div>
+        </section>
+        <p class="dash-foot">Evidence first. Updated 23 November 2026.</p>
+      </aside>
+    </div>
   </nav>
 
   <main id="main">
@@ -55,30 +84,29 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="container hero-grid">
         <div class="hero-copy reveal">
-          <p class="story-open">FADE IN. <span>AN AI &amp; DATA SCIENCE PORTFOLIO · 2026</span></p>
+          <p class="story-open">FADE IN. <span>AI &amp; DATA SCIENCE · 2026</span></p>
           <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Available for internships &amp; graduate roles</p>
-          <h1 id="hero-title">I turn messy data into<br><em>decisions you can defend.</em></h1>
+          <h1 id="hero-title">Messy data in.<br><em>Clear answers out.</em></h1>
           <p class="hero-lead">
-            I'm Faria Kamal, an MSc Artificial Intelligence student at Birmingham City University.
-            I build practical data science projects — and I care as much about <em>why</em> a
-            decision was made as about the code behind it.
+            I'm Faria, an MSc AI student at Birmingham City University. I build small projects
+            end to end — and show the limits as clearly as the results.
           </p>
           <div class="hero-actions">
-            <a class="btn" href="#work">See selected work ↓</a>
-            <a class="btn" href="#about">More about me</a>
+            <a class="btn" href="#work">See the work ↓</a>
+            <a class="btn" href="#about">About me</a>
           </div>
           <p class="hero-meta" id="hero-location"></p>
         </div>
 
         <aside class="hero-card reveal" aria-label="At a glance">
-          <div class="hero-card-head"><span>PROFILE / 001</span><span class="hero-card-icon" aria-hidden="true">✦</span></div>
+          <div class="hero-card-head"><span>AT A GLANCE / 001</span><span class="hero-card-icon" aria-hidden="true">✦</span></div>
           <dl class="hero-stats">
-            <div><dt>Current focus</dt><dd>MSc Artificial Intelligence</dd></div>
-            <div><dt>Working with</dt><dd>Python · pandas · Colab</dd></div>
-            <div><dt>Built recently</dt><dd>Hotel cancellation model</dd></div>
-            <div><dt>Exploring now</dt><dd>Customer loyalty analytics</dd></div>
+            <div><dt>Now</dt><dd>MSc Artificial Intelligence</dd></div>
+            <div><dt>Tools</dt><dd>Python · pandas · Colab</dd></div>
+            <div><dt>Recent</dt><dd>Cancellation model</dd></div>
+            <div><dt>Next</dt><dd>Retail loyalty audit</dd></div>
           </dl>
-          <p class="hero-card-note">Evidence first. Claims only where the project can back them up.</p>
+          <p class="hero-card-note">Evidence first. No borrowed numbers.</p>
         </aside>
       </div>
       <div class="container"><div class="hero-rule" aria-hidden="true"></div></div>
@@ -88,23 +116,20 @@
     <section class="section" id="about" aria-labelledby="about-title">
       <div class="container two-col">
         <div class="reveal">
-          <p class="section-kicker mono"><span class="chapter-no">CHAPTER 01</span><span class="kicker-separator">/</span> ABOUT</p>
-          <h2 id="about-title">A computer science graduate moving deliberately into AI &amp; data science.</h2>
+          <p class="section-kicker">ABOUT</p>
+          <h2 id="about-title">Computer science graduate. AI student. Careful with claims.</h2>
         </div>
         <div class="reveal">
           <p>
-            My background is in Computer Science and Engineering, followed by roles in project
-            coordination, IT systems support and ERP implementation. That combination matters:
-            I've spent years asking stakeholders the right questions, documenting decisions and
-            explaining technical issues clearly to non-technical people.
+            I started in Computer Science and Engineering, then worked in project coordination,
+            IT support and ERP. Years of asking the right questions, documenting decisions and
+            explaining tech plainly.
           </p>
           <p>
-            I'm now applying that same discipline to data work. My projects are intentionally
-            small enough to understand end to end, but grounded in realistic data and honest
-            limitations. I'd rather show a model that misses 59% of cancellations and explain
-            why, than present a headline number without context.
+            Now I bring that habit to data. Small projects I understand end to end, real data,
+            and the awkward numbers left in.
           </p>
-          <a class="text-link" href="#contact">Let's talk about what I can bring to your team →</a>
+          <a class="text-link" href="#contact">Let's talk →</a>
         </div>
       </div>
     </section>
@@ -113,28 +138,26 @@
     <section class="section section-alt" id="skills" aria-labelledby="skills-title">
       <div class="container">
         <div class="section-head reveal">
-          <p class="section-kicker mono"><span class="chapter-no">CHAPTER 02</span><span class="kicker-separator">/</span> TOOLKIT</p>
-          <h2 id="skills-title">What I use — and what I'm still learning.</h2>
-          <p class="section-intro">Grouped by how confidently I can use each one today. No inflated labels.</p>
+          <p class="section-kicker">TOOLKIT</p>
+          <h2 id="skills-title">The tools I use. The ones I'm growing into.</h2>
+          <p class="section-intro">Grouped by how well I know them today. No inflated labels.</p>
         </div>
         <div class="skill-grid">
           <article class="skill-card reveal">
             <h3>Working knowledge</h3>
             <ul>
               <li>Python (pandas, NumPy)</li>
-              <li>Google Colab notebooks</li>
+              <li>Google Colab</li>
               <li>Data cleaning &amp; exploration</li>
-              <li>Exploratory data visualisation</li>
               <li>Git &amp; GitHub</li>
             </ul>
           </article>
           <article class="skill-card reveal">
             <h3>Building on</h3>
             <ul>
-              <li>scikit-learn (classification, clustering)</li>
+              <li>scikit-learn</li>
               <li>Model evaluation &amp; baselines</li>
               <li>SQL fundamentals</li>
-              <li>Statistics for decision-making</li>
               <li>Technical documentation</li>
             </ul>
           </article>
@@ -142,9 +165,8 @@
             <h3>From previous roles</h3>
             <ul>
               <li>Stakeholder communication</li>
-              <li>Project coordination &amp; scheduling</li>
+              <li>Project coordination</li>
               <li>KPI tracking &amp; reporting</li>
-              <li>Microsoft Dynamics 365 awareness</li>
               <li>Jira · Trello · SharePoint</li>
             </ul>
           </article>
@@ -156,9 +178,9 @@
     <section class="section" id="work" aria-labelledby="work-title">
       <div class="container">
         <div class="section-head reveal">
-          <p class="section-kicker mono"><span class="chapter-no">CHAPTER 03</span><span class="kicker-separator">/</span> SELECTED WORK</p>
+          <p class="section-kicker">SELECTED WORK</p>
           <h2 id="work-title">Projects with a paper trail.</h2>
-          <p class="section-intro">Each case study explains the question, the method, the result and the limitations.</p>
+          <p class="section-intro">Question, method, result, limits. All in the case study.</p>
         </div>
 
         <div class="project-grid">
@@ -173,7 +195,7 @@
             <div class="project-body">
               <p class="project-tag">P / 01 · MACHINE LEARNING</p>
               <h3><a href="hotel-booking-cancellation.html">Hotel Booking Cancellation <span aria-hidden="true">↗</span></a></h3>
-              <p class="project-summary">Four classifiers compared on 119,390 bookings. Better accuracy, but weak recall — stated plainly.</p>
+              <p class="project-summary">Four classifiers on 119,390 bookings. Higher accuracy, weak recall — both stated.</p>
               <dl class="project-facts">
                 <div><dt>Accuracy</dt><dd>79.53%</dd></div>
                 <div><dt>Recall</dt><dd>41.06%</dd></div>
@@ -197,7 +219,7 @@
             <div class="project-body">
               <p class="project-tag">P / 02 · DATA ANALYSIS · IN PROGRESS</p>
               <h3><a href="online-retail-customer-analysis.html">Online Retail II — Repeat Purchase <span aria-hidden="true">↗</span></a></h3>
-              <p class="project-summary">A documented data-quality audit of 1,067,371 transactions. Cleaning rules come before findings.</p>
+              <p class="project-summary">1,067,371 transactions. Cleaning rules before findings.</p>
               <dl class="project-facts">
                 <div><dt>Stage</dt><dd>Audit</dd></div>
                 <div><dt>Results</dt><dd>Not yet</dd></div>
@@ -221,7 +243,7 @@
             <div class="project-body">
               <p class="project-tag">P / 03 · WEB DEVELOPMENT</p>
               <h3><a href="portfolio-website.html">Portfolio Website <span aria-hidden="true">↗</span></a></h3>
-              <p class="project-summary">No framework, no build step. Published one small commit at a time, with every claim checked.</p>
+              <p class="project-summary">No framework, no build step. One honest commit at a time.</p>
               <dl class="project-facts">
                 <div><dt>Stack</dt><dd>HTML/CSS/JS</dd></div>
                 <div><dt>Hosting</dt><dd>Pages</dd></div>
@@ -240,34 +262,34 @@
     <section class="section section-alt" id="experience" aria-labelledby="experience-title">
       <div class="container two-col">
         <div class="reveal">
-          <p class="section-kicker mono"><span class="chapter-no">CHAPTER 04</span><span class="kicker-separator">/</span> EXPERIENCE</p>
-          <h2 id="experience-title">The work that shaped how I work.</h2>
-          <p class="section-intro">Roles where communication, documentation and follow-through mattered most.</p>
+          <p class="section-kicker">EXPERIENCE</p>
+          <h2 id="experience-title">The work that taught me how to work.</h2>
+          <p class="section-intro">Where communication and follow-through mattered most.</p>
         </div>
         <ol class="timeline reveal">
           <li>
             <p class="mono">Jun 2024 — Jul 2026</p>
             <h3>Assistant Manager</h3>
             <p class="timeline-place">Vartiq · Dhaka, Bangladesh</p>
-            <p>First point of contact for internal teams; coordinated daily activities, tracked outstanding work and maintained clear operational records.</p>
+            <p>Coordinated daily work and kept clear records across teams.</p>
           </li>
           <li>
             <p class="mono">Dec 2022 — Feb 2024</p>
             <h3>Store &amp; Merchandiser IT Associate</h3>
             <p class="timeline-place">Hirdaramani Bangladesh · Chittagong</p>
-            <p>Supported day-to-day use of Microsoft Dynamics 365 ERP, gathered requirements from business users, monitored KPIs and guided colleagues through system issues.</p>
+            <p>Supported Dynamics 365 ERP, gathered requirements and tracked KPIs.</p>
           </li>
           <li>
             <p class="mono">Jul 2022 — Dec 2022</p>
             <h3>Junior Project Coordinator</h3>
             <p class="timeline-place">Bonik · Chittagong</p>
-            <p>Coordinated an eCommerce platform's daily tasks, maintained schedules and documentation, and followed up on deadlines across teams.</p>
+            <p>Kept eCommerce schedules, docs and deadlines moving.</p>
           </li>
           <li>
             <p class="mono">Jan 2021 — Jul 2021</p>
             <h3>Teaching Assistant</h3>
             <p class="timeline-place">International Islamic University Chittagong</p>
-            <p>Supported lab and classroom activity, adapted explanations for different backgrounds and gave one-to-one feedback to students.</p>
+            <p>Explained lab work clearly and gave one-to-one feedback.</p>
           </li>
         </ol>
       </div>
@@ -277,19 +299,19 @@
     <section class="section" id="education" aria-labelledby="education-title">
       <div class="container two-col">
         <div class="reveal">
-          <p class="section-kicker mono"><span class="chapter-no">CHAPTER 05</span><span class="kicker-separator">/</span> EDUCATION</p>
-          <h2 id="education-title">Where the foundations came from.</h2>
+          <p class="section-kicker">EDUCATION</p>
+          <h2 id="education-title">Where it started. Where it's going.</h2>
         </div>
         <div class="edu-list reveal">
           <article>
-            <p class="mono">September 2026 — March 2028</p>
+            <p class="mono">MSc · 2026—2028</p>
             <h3>MSc Artificial Intelligence</h3>
-            <p>Birmingham City University, United Kingdom</p>
+            <p>Birmingham City University, September 2026 – March 2028</p>
           </article>
           <article>
-            <p class="mono">2017 — 2022</p>
+            <p class="mono">BSc · 2017—2022</p>
             <h3>BSc Computer Science &amp; Engineering</h3>
-            <p>International Islamic University Chittagong, Bangladesh · CGPA 3.49/4.0</p>
+            <p>International Islamic University Chittagong · CGPA 3.49/4.0</p>
           </article>
           <article>
             <p class="mono">Recognition</p>
@@ -304,7 +326,7 @@
     <section class="section section-alt" id="now" aria-labelledby="now-title">
       <div class="container two-col">
         <div class="reveal">
-          <p class="section-kicker mono"><span class="chapter-no">CHAPTER 06</span><span class="kicker-separator">/</span> NOW</p>
+          <p class="section-kicker">NOW</p>
           <h2 id="now-title">Intermission — currently watching &amp; reading.</h2>
           <p class="section-intro">A small corner of the site that changes. Titles are added here as I finish or start them — nothing listed here is a claim about skills or experience.</p>
         </div>
@@ -338,11 +360,10 @@
     <section class="section contact" id="contact" aria-labelledby="contact-title">
       <div class="container contact-inner reveal">
         <div>
-          <p class="section-kicker mono"><span class="chapter-no">CHAPTER 07</span><span class="kicker-separator">/</span> CONTACT</p>
+          <p class="section-kicker">CONTACT</p>
           <h2 id="contact-title">Final scene — open to a conversation.</h2>
           <p class="contact-copy">
-            If you're hiring for an AI or data science internship or graduate role, I'd be glad
-            to talk about the projects above and what I'm building next.
+            If you're hiring for an AI or data science role, I'd love to hear from you.
           </p>
         </div>
         <div class="contact-panel">
@@ -356,7 +377,7 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>Faria Kamal <span class="mono">— AI &amp; Data Science portfolio</span></p>
+      <p>Faria Kamal <span class="mono">— AI &amp; Data Science</span></p>
       <p class="mono">HTML · CSS · a little JavaScript · <span id="year"></span></p>
     </div>
   </footer>
