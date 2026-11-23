@@ -83,26 +83,22 @@ a { color: inherit; }
 /* ---------- Bottom-left dashboard index ---------- */
 .menu-toggle {
   position: fixed;
-  left: 20px;
-  bottom: 20px;
+  left: 24px;
+  bottom: 22px;
   z-index: 120;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: var(--paper);
-  color: var(--ink);
-  border: 1px solid var(--line-strong);
-  border-radius: 2px;
-  padding: 10px 14px;
+  background: none;
+  border: 0;
+  border-bottom: 1px solid var(--line-strong);
+  padding: 0 0 3px;
   cursor: pointer;
   font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.12em;
+  font-size: 10px;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  box-shadow: 2px 2px 0 rgba(44, 51, 48, 0.07);
+  color: var(--faint);
 }
-.menu-toggle:hover { background: var(--paper-2); }
-.menu-toggle-icon { font-size: 14px; line-height: 1; color: var(--accent); }
+.menu-toggle:hover { color: var(--ink); border-color: var(--ink); }
+.menu-toggle:focus-visible { outline: 1px solid var(--accent); outline-offset: 4px; }
 
 .corner-menu {
   position: fixed;
@@ -337,50 +333,6 @@ h3 { font-size: 1.25rem; }
 .story-beats span { white-space: nowrap; }
 .story-beats b { color: var(--accent); font-weight: normal; margin-right: 6px; }
 
-.story-premise {
-  margin: 26px 0 0;
-  padding: 12px 0 0;
-  border-top: 1px solid var(--line);
-  font-family: var(--mono);
-  font-size: 10px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--faint);
-}
-.story-premise b { color: var(--accent); font-weight: normal; }
-.flashback { color: var(--faint); font-style: italic; }
-
-/* The thread: a cut from one chapter to the next. */
-.story-bridge {
-  display: grid;
-  grid-template-columns: 92px 1fr;
-  gap: 20px;
-  margin: 0 0 40px;
-  padding: 18px 0 0;
-  border-top: 1px solid var(--line-strong);
-}
-.story-bridge-label {
-  margin: 0;
-  font-family: var(--mono);
-  font-size: 9px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--accent);
-  padding-top: 4px;
-}
-.story-bridge-body p { margin: 0; color: var(--muted); font-style: italic; }
-.story-bridge-body a {
-  display: inline-block;
-  margin-top: 8px;
-  font-family: var(--mono);
-  font-size: 10px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  text-decoration: none;
-  border-bottom: 1px solid var(--line-strong);
-  color: var(--ink);
-}
-.story-bridge-body a:hover { border-color: var(--ink); }
 .story-face { font-family: var(--serif); color: var(--accent); font-style: normal; margin-left: 6px; }
 
 /* ---------- Sections ---------- */
@@ -544,6 +496,4 @@ h3 { font-size: 1.25rem; }
   .dash-index li:last-child a { grid-column: auto; }
   .story-progress { display: none; }
   .story-open span { display: block; margin: 8px 0 0; }
-  .story-bridge { grid-template-columns: 1fr; gap: 8px; }
-  .story-premise { line-height: 1.8; }
 }

@@ -58,7 +58,7 @@
     var icon = toggle.querySelector(".menu-toggle-icon");
     var label = toggle.querySelector(".menu-toggle-label");
     if (icon) icon.textContent = open ? "×" : "+";
-    if (label) label.textContent = open ? "Close" : "Menu";
+    if (label) label.textContent = open ? "Close" : "Index";
   }
 
   if (toggle && menu) {
